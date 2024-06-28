@@ -65,12 +65,46 @@
             background: url('https://www.pngall.com/wp-content/uploads/4/Balloon-PNG-Image-File.png') no-repeat center;
             background-size: contain;
             animation: float 5s infinite;
+            margin: 0 auto;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
         }
+        .ascii-art {
+            font-size: 1.2em;
+            color: #ff69b4;
+            white-space: pre;
+        }
+        .interactive {
+            margin-top: 30px;
+        }
+        button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
+    <script>
+        function showSurprise() {
+            document.getElementById('surprise').classList.toggle('hidden');
+        }
+    </script>
 </head>
 <body>
     <h1>Hello, Maddie!</h1>
@@ -79,5 +113,30 @@
     <p class="rainbow-text">Hiya, Maddie!</p>
     <p class="glitter">Hi, Maddie, you're awesome!</p>
     <div class="balloons"></div>
+
+    <div class="ascii-art">
+        <pre>
+  ,--.
+   \  \
+    `. `.
+      `..\__
+        ||--\
+       /   @ )
+      /     {
+     /  \  {\
+    /   _)_{\
+   /  ,' ,)__)
+  (_.'  (_.,' 
+        </pre>
+    </div>
+
+    <div class="interactive">
+        <button onclick="showSurprise()">Click for a Surprise!</button>
+        <div id="surprise" class="hidden">
+            <h2>🎉 Surprise, Maddie! 🎉</h2>
+            <p>You're the best! 🌟</p>
+            <img src="https://www.pngall.com/wp-content/uploads/5/Unicorn-Rainbow-PNG.png" alt="Unicorn Rainbow" width="300">
+        </div>
+    </div>
 </body>
 </html>
