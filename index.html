@@ -3,159 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akvan Designs</title>
+    <title>Hi Maddie!</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background: url('header-image.jpg') no-repeat center center/cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-color: #ffe6f2;
+            color: #ff69b4;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px;
         }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
+        h1 {
+            font-size: 3em;
+            color: #ff1493;
         }
-        header p {
-            font-size: 1.5rem;
-            margin: 10px 0 0;
+        .heart {
+            color: #ff69b4;
+            font-size: 2em;
+            animation: heartbeat 1s infinite;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
         }
-        nav a {
-            color: white;
-            padding: 1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
+        .wave {
+            display: inline-block;
+            transform: rotate(0deg);
+            animation: wave 1s infinite;
+            transform-origin: 70% 70%;
         }
-        nav a:hover {
-            background-color: #575757;
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(14deg); }
+            75% { transform: rotate(-14deg); }
         }
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .rainbow-text {
+            background: linear-gradient(90deg, #ff69b4, #ffb6c1, #ff69b4, #ffb6c1);
+            background-size: 200% 200%;
+            animation: rainbow 2s infinite;
+            -webkit-background-clip: text;
+            color: transparent;
         }
-        .section {
-            margin-bottom: 2rem;
+        @keyframes rainbow {
+            0%, 100% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
         }
-        .section h2 {
-            color: #4B9CD3; /* Light blue */
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        .glitter {
+            color: #ff1493;
+            animation: glitter 1.5s infinite;
         }
-        .project {
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1rem;
+        @keyframes glitter {
+            0%, 100% { text-shadow: 0 0 10px #ff69b4; }
+            50% { text-shadow: 0 0 20px #ff1493; }
         }
-        .project h3 {
-            color: #333;
-            margin-top: 0;
+        .balloons {
+            width: 200px;
+            height: 200px;
+            background: url('https://www.pngall.com/wp-content/uploads/4/Balloon-PNG-Image-File.png') no-repeat center;
+            background-size: contain;
+            animation: float 5s infinite;
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
     </style>
-    <meta name="description" content="Akvan Designs offers expert mechanical engineering, product design, and manufacturing services. Discover our projects and services to see how we can help bring your ideas to life.">
-    <meta name="keywords" content="mechanical engineering, product design, manufacturing, CAD design, engineering services, Akvan Designs">
 </head>
 <body>
-    <header>
-        <h1>Akvan Designs</h1>
-        <p>From napkin sketches to manufacturing-ready CAD files</p>
-        <nav>
-            <a href="#about">About The Company</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">What We Do</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <div class="container">
-        <section id="about" class="section">
-            <h2>About The Company</h2>
-            <p>Akvan Designs aims to aid companies and individuals in completing their design tasks. From initial concepts to CAD files ready for manufacturing, we offer comprehensive mechanical engineering, product design, and manufacturing services to ensure your project exceeds expectations and is completed in a timely manner.</p>
-        </section>
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description: Placeholder for Project 1. Briefly describe the project, its challenges, and the solutions provided.</p>
-                <p>Keywords: mechanical engineering, product design, custom solution</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description: Placeholder for Project 2. Briefly describe the project, its challenges, and the solutions provided.</p>
-                <p>Keywords: CAD design, prototyping, manufacturing</p>
-            </div>
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description: Placeholder for Project 3. Briefly describe the project, its challenges, and the solutions provided.</p>
-                <p>Keywords: product development, engineering services, process optimization</p>
-            </div>
-            <div class="project">
-                <h3>Project 4</h3>
-                <p>Description: Placeholder for Project 4. Briefly describe the project, its challenges, and the solutions provided.</p>
-                <p>Keywords: mechanical engineering, product design, innovation</p>
-            </div>
-            <div class="project">
-                <h3>Project 5</h3>
-                <p>Description: Placeholder for Project 5. Briefly describe the project, its challenges, and the solutions provided.</p>
-                <p>Keywords: manufacturing, CAD files, efficiency</p>
-            </div>
-        </section>
-        <section id="services" class="section">
-            <h2>What We Do</h2>
-            <p>At Akvan Designs, we offer a range of services tailored to meet the needs of our clients. Our expertise includes:</p>
-            <ul>
-                <li>Mechanical Engineering: Providing robust and innovative engineering solutions.</li>
-                <li>Product Design: Turning ideas into functional and manufacturable designs.</li>
-                <li>Manufacturing: Ensuring efficient and cost-effective production processes.</li>
-                <li>CAD Design: Creating precise and detailed CAD files ready for manufacturing.</li>
-            </ul>
-            <p>Keywords: mechanical engineering services, product design consulting, manufacturing solutions, CAD design services, engineering consultancy</p>
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:contact@akvandesigns.com">contact@akvandesigns.com</a></p>
-            <p>Phone: (123) 456-7890</p>
-            <p>Social Media: 
-                <a href="#">LinkedIn</a> | 
-                <a href="#">Twitter</a> | 
-                <a href="#">Facebook</a>
-            </p>
-        </section>
-    </div>
-    <footer>
-        <p>&copy; 2024 Akvan Designs. All rights reserved.</p>
-    </footer>
+    <h1>Hello, Maddie!</h1>
+    <p class="heart">❤️ Hi, Maddie! ❤️</p>
+    <p class="wave">👋 Hey there, Maddie! 👋</p>
+    <p class="rainbow-text">Hiya, Maddie!</p>
+    <p class="glitter">Hi, Maddie, you're awesome!</p>
+    <div class="balloons"></div>
 </body>
 </html>
