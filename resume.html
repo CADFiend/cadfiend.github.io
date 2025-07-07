@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AkvanDesigns.com</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+  <meta charset="UTF-8">
+  <title>Resume</title>
+  <style>
+    .resume-container {
+      width: 8.5in;
+      height: 11in;
+      margin: 2rem auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+
+    .resume-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .download-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .download-link a {
+      text-decoration: none;
+      color: #0056b3;
+    }
+
+    .download-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="resume">
-        <img src="resume.png" alt="Resume" class="resume">
-    </div>
+
+  <div class="resume-container">
+    <img src="resume.jpg" alt="Resume Image">
+  </div>
+
+  <div class="download-link">
+    <a href="resume.pdf" download>Download PDF Version</a>
+  </div>
+
 </body>
 </html>
